@@ -1,0 +1,48 @@
+# .NET Core ve ASP.NET Core için genel ignore kuralları
+
+## İşlem Dosyaları
+bin/
+obj/
+
+# Kullanıcıya Özel Dosyalar
+*.user
+*.suo
+*.vs/
+*.vscode/
+
+# Günlük (Log) Dosyaları
+logs/
+*.log
+*.nlog
+*.nlog.config
+
+# Debug ve Release Klasörleri
+**/Debug/
+**/Release/
+**/x64/
+**/x86/
+**/out/
+**/publish/
+
+# Paketler ve Bağımlılıklar
+node_modules/
+wwwroot/lib/
+wwwroot/dist/
+
+# Uygulama Ayar Dosyaları (Hassas Bilgileri İçerir)
+appsettings.json
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Docker Ignore
+docker-compose.override.yml
+.dockerignore
+
+# Rider ve VS Code gibi IDE dosyaları
+.idea/
+.vscode/
+
+# MacOS ve Linux sistem dosyaları
+.DS_Store
+._*
