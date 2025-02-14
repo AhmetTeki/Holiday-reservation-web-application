@@ -11,9 +11,10 @@ namespace TraversalRezervasyonApp.ViewComponents.Default
         
         public IViewComponentResult Invoke()
         {
-            var values = _featureManager.TGetList();
+            //var values = _featureManager.TGetList();
+            //ViewBag.image1=
             
-            return View(values);
+            return View();
         }
     }
 }
