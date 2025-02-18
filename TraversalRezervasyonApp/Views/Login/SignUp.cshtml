@@ -40,30 +40,30 @@
 <body>
     <div class="card">
         <h3 class="text-center mb-4">Kayıt Formu</h3>
-        <form id="registerForm">
+        <form id="registerForm" method="post">
             <div class="mb-3">
-                <label for="username" class="form-label">Adınız</label>
-                <input type="text" class="form-control" id="username" placeholder="Kullanıcı Adı" required>
+                <label for="Name" class="form-label">Adınız</label>
+                <input type="text" class="form-control" name="Name" placeholder="Kullanıcı Adı" required>
             </div>
             <div class="mb-3">
-                <label for="phone" class="form-label">Soyadınız</label>
-                <input type="text" class="form-control" id="phone" placeholder="Soyad" required>
+                <label for="Surname" class="form-label">Soyadınız</label>
+                <input type="text" class="form-control" name="Surname" placeholder="Soyad" required>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" placeholder="Email" required>
+                <label for="Mail" class="form-label">Email</label>
+                <input type="mail" class="form-control" name="Mail" placeholder="Email" required>
             </div>
             <div class="mb-3">
-                <label for="telNo" class="form-label">Telefon Numaranız</label>
-                <input type="text" class="form-control" id="telNo" placeholder="Telefon No" required>
+                <label for="Username" class="form-label">Telefon Numaranız</label>
+                <input type="text" class="form-control" name="Username" placeholder="Kullanıcı Adınız" required>
             </div>
             <div class="mb-3">
-                <label for="password" class="form-label">Şifre</label>
-                <input type="password" class="form-control" id="password" placeholder="Şifre" required>
+                <label for="Password" class="form-label">Şifre</label>
+                <input type="password" class="form-control" name="Password" placeholder="Şifre" required>
             </div>
             <div class="mb-3">
-                <label for="confirmPassword" class="form-label">Şifre Tekrar</label>
-                <input type="password" class="form-control" id="confirmPassword" placeholder="Şifre Tekrar" required>
+                <label for="ConfirmPassword" class="form-label">Şifre Tekrar</label>
+                <input type="password" class="form-control" name="ConfirmPassword" placeholder="Şifre Tekrar" required>
                 <div id="passwordError" class="text-danger mt-1" style="display: none;">Passwords do not match</div>
             </div>
             <button type="submit" class="btn btn-primary w-100">Kayıt Ol</button>
