@@ -1,0 +1,75 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kullanıcı Kayıt Ekranı</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #667eea;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #5563c1;
+            }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h3 class="text-center mb-4">Kayıt Formu</h3>
+        <form id="registerForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Adınız</label>
+                <input type="text" class="form-control" id="username" placeholder="Kullanıcı Adı" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Soyadınız</label>
+                <input type="text" class="form-control" id="phone" placeholder="Soyad" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <label for="telNo" class="form-label">Telefon Numaranız</label>
+                <input type="text" class="form-control" id="telNo" placeholder="Telefon No" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Şifre</label>
+                <input type="password" class="form-control" id="password" placeholder="Şifre" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Şifre Tekrar</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Şifre Tekrar" required>
+                <div id="passwordError" class="text-danger mt-1" style="display: none;">Passwords do not match</div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Kayıt Ol</button>
+            <a href="/Login/SignIn"  class="btn btn-success w-100 mt-2">Giriş Yap</a>
+        </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>
