@@ -54,17 +54,22 @@
                 <input type="mail" class="form-control" name="Mail" placeholder="Email" required>
             </div>
             <div class="mb-3">
-                <label for="Username" class="form-label">Telefon Numaranız</label>
+                <label for="Username" class="form-label">Kullanıcı Adınız</label>
                 <input type="text" class="form-control" name="Username" placeholder="Kullanıcı Adınız" required>
+                
             </div>
             <div class="mb-3">
                 <label for="Password" class="form-label">Şifre</label>
                 <input type="password" class="form-control" name="Password" placeholder="Şifre" required>
+                
             </div>
             <div class="mb-3">
                 <label for="ConfirmPassword" class="form-label">Şifre Tekrar</label>
                 <input type="password" class="form-control" name="ConfirmPassword" placeholder="Şifre Tekrar" required>
-                <div id="passwordError" class="text-danger mt-1" style="display: none;">Passwords do not match</div>
+                
+            </div>
+            <div class="mb-3" asp-validation-summary="ModelOnly">
+
             </div>
             <button type="submit" class="btn btn-primary w-100">Kayıt Ol</button>
             <a href="/Login/SignIn"  class="btn btn-success w-100 mt-2">Giriş Yap</a>
