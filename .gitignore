@@ -46,3 +46,11 @@ docker-compose.override.yml
 # MacOS ve Linux sistem dosyaları
 .DS_Store
 ._*
+# Tüm resim dosyalarını yok say
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.webp
+*.bmp
