@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\sneat-1.0.0\html\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.1.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.36" />
@@ -30,8 +34,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Member\Data\" />
+    <Folder Include="wwwroot\sneat-1.0.0\html\.vs\html\FileContentIndex\merges\" />
+    <Folder Include="wwwroot\sneat-1.0.0\html\.vs\html\v17\" />
     <Folder Include="wwwroot\userimages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue-comment.yml" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\handle-new-issue.yml" />
+    <None Include="wwwroot\sneat-1.0.0\.github\workflows\issue-staler.yml" />
+    <None Include="wwwroot\sneat-1.0.0\html\.vs\html\FileContentIndex\ce6c7874-8562-4e24-9869-81622ebcf9d7.vsidx" />
+    <None Include="wwwroot\sneat-1.0.0\html\.vs\html\FileContentIndex\read.lock" />
+    <None Include="wwwroot\sneat-1.0.0\html\.vs\slnx.sqlite" />
   </ItemGroup>
 
 </Project>
