@@ -1,5 +1,6 @@
 using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
+using BusinessLayer.Container;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
@@ -10,6 +11,8 @@ using TraversalRezervasyonApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.ContainerDependencies();
+
 // Add services to the container.
 builder.Services.AddDbContext<Context>();
 
@@ -19,19 +22,8 @@ builder.Services.AddIdentity<AppUser, AppRole>()
     .AddErrorDescriber<CustomIdentityValidator>()
     .AddEntityFrameworkStores<Context>();
 
-/////////////////////////////////////////////////////////
-
-builder.Services.AddScoped<ICommentService, CommentManager>();
-builder.Services.AddScoped<ICommentDal, EFCommentDal>();
-
-builder.Services.AddScoped<IDestinationService, DestinationManager>();
-builder.Services.AddScoped<IDestinationDal, EfDestination>();
-
-builder.Services.AddScoped<IAppUserService, AppUserManager>();
-builder.Services.AddScoped<IAppUserDal, EFAppUserDal>();
 
 
-////////////////////////////////////////////////////////
 
 builder.Services.AddControllersWithViews(opt =>
 {
@@ -40,7 +32,6 @@ builder.Services.AddControllersWithViews(opt =>
     .Build();
     opt.Filters.Add(new AuthorizeFilter(policy));
 });
-
 
 
 
