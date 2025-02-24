@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using TraversalRezervasyonApp.Models;
 
 namespace TraversalRezervasyonApp.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -15,11 +17,18 @@ namespace TraversalRezervasyonApp.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
         public IActionResult Privacy()
         {
+            
+            return View();
+        }
+        public IActionResult Test() 
+        {
+            
             return View();
         }
 

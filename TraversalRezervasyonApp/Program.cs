@@ -23,7 +23,12 @@ builder.Services.AddIdentity<AppUser, AppRole>()
     .AddErrorDescriber<CustomIdentityValidator>()
     .AddEntityFrameworkStores<Context>();
 
-
+builder.Services.AddLogging(x =>
+{
+    x.ClearProviders();
+    x.SetMinimumLevel(LogLevel.Debug);
+    x.AddFile($"{Directory.GetCurrentDirectory()}\\Logs\\log1.txt");
+});
 
 
 builder.Services.AddControllersWithViews(opt =>
