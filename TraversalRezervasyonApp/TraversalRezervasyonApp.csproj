@@ -15,6 +15,7 @@
     <PackageReference Include="EPPlus" Version="7.0.0" />
     <PackageReference Include="FluentValidation" Version="11.1.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.0" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.9.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.36" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.36" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.36">
@@ -40,6 +41,7 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Member\Data\" />
+    <Folder Include="wwwroot\pdfreports\" />
     <Folder Include="wwwroot\sneat-1.0.0\html\.vs\html\FileContentIndex\merges\" />
     <Folder Include="wwwroot\sneat-1.0.0\html\.vs\html\v17\" />
     <Folder Include="wwwroot\userimages\" />
