@@ -1,4 +1,5 @@
-﻿using ClosedXML.Excel;
+﻿using BusinessLayer.Abstract;
+using ClosedXML.Excel;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.Migrations;
 using Microsoft.AspNetCore.Mvc;
@@ -7,8 +8,16 @@ using TraversalRezervasyonApp.Models;
 
 namespace TraversalRezervasyonApp.Controllers
 {
+    
     public class ExcelController : Controller
     {
+        private readonly IExcelService _excelService;
+
+        public ExcelController(IExcelService excelService)
+        {
+            _excelService = excelService;
+        }
+
         public IActionResult Index()
         {
            return View();
@@ -33,26 +42,11 @@ namespace TraversalRezervasyonApp.Controllers
 
         public IActionResult StaticExcelReport()
         {
-            //hata alırsan buraya yorumlardaki şeyi koy
 
-            ExcelPackage excel = new ExcelPackage();
-            var workSheet = excel.Workbook.Worksheets.Add("sayfa 1");
-            workSheet.Cells[1, 1].Value = "Rota";
-            workSheet.Cells[1, 2].Value = "Rehber";
-            workSheet.Cells[1, 3].Value = "Kontenjan";
+            return File(_excelService.ExcelList(DestinationList()), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","YeniDosya.xlsx");
+            //application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 
-            workSheet.Cells[2, 1].Value = "Türkiye-ADIYAMAN";
-            workSheet.Cells[2, 2].Value = "Ahmet";
-            workSheet.Cells[2, 3].Value = "30";
-
-            workSheet.Cells[3, 1].Value = "Türkiye-Kocaeli";
-            workSheet.Cells[3, 2].Value = "samadi";
-            workSheet.Cells[3, 3].Value = "50";
-
-
-            var bytes = excel.GetAsByteArray();
-            return File(bytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "dosya2.xlsx");
         }
         public IActionResult DestinationExcelReport()
         {
