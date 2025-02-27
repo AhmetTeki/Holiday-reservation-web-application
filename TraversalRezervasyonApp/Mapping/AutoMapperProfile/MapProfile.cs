@@ -13,6 +13,8 @@ namespace TraversalRezervasyonApp.Mapping.AutoMapperProfile
             CreateMap<AnnouncementAddDTOs, Announcement>().ReverseMap();
             CreateMap<AppUserRegisterDTOs, AppUser>().ReverseMap();
             CreateMap<AppUserLoginDTOs, AppUser>().ReverseMap();
+            CreateMap<AnnouncementListDTO, Announcement>().ReverseMap();
+            CreateMap<AnnouncementUpdateDto, Announcement>().ReverseMap();
            
         }
     }

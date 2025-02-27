@@ -20,7 +20,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.ContainerDependencies();
 
 builder.Services.AddAutoMapper(typeof(MapProfile));
-builder.Services.AddTransient<IValidator<AnnouncementAddDTOs>, AnnouncementValidator>();
+builder.Services.CustomerValidator();
+ 
 
 builder.Services.AddControllersWithViews().AddFluentValidation();
 
