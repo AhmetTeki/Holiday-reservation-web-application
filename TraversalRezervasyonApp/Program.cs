@@ -1,18 +1,28 @@
 using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
 using BusinessLayer.Container;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using DTOLayer.DTOs.AnnouncementDTOs;
 using EntityLayer.Concrete;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using TraversalRezervasyonApp.Mapping.AutoMapperProfile;
 using TraversalRezervasyonApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.ContainerDependencies();
+
+builder.Services.AddAutoMapper(typeof(MapProfile));
+builder.Services.AddTransient<IValidator<AnnouncementAddDTOs>, AnnouncementValidator>();
+
+builder.Services.AddControllersWithViews().AddFluentValidation();
 
 // Add services to the container.
 builder.Services.AddDbContext<Context>();
