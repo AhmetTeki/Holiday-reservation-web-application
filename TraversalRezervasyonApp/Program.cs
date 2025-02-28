@@ -17,7 +17,11 @@ using TraversalRezervasyonApp.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpClient();
+
 builder.Services.ContainerDependencies();
+
+
 
 builder.Services.AddAutoMapper(typeof(MapProfile));
 builder.Services.CustomerValidator();
