@@ -12,6 +12,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using System.Reflection;
 using TraversalRezervasyonApp.CQRS.Handlers.DestinationHandlers;
 using TraversalRezervasyonApp.Mapping.AutoMapperProfile;
 using TraversalRezervasyonApp.Models;
@@ -45,6 +46,9 @@ builder.Services.AddScoped<GetDestinationByIdQueryHandler>();
 builder.Services.AddScoped<CreateDestinationCommandHandler>();
 builder.Services.AddScoped<RemoveDesitnationCommandHandler>();
 builder.Services.AddScoped<UpdateDestinationCommandHandler>();
+
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 builder.Services.AddLogging(x =>
 {
