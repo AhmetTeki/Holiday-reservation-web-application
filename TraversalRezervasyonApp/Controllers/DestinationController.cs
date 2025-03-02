@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace TraversalRezervasyonApp.Controllers
 {
+    [AllowAnonymous]
     public class DestinationController : Controller
     {
         readonly DestinationManager destinationManager = new DestinationManager(new EfDestination());
