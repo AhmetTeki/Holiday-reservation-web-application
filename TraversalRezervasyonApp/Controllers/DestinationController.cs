@@ -19,6 +19,7 @@ namespace TraversalRezervasyonApp.Controllers
         public IActionResult DestinationDetails(int id)
         {
             ViewBag.i = id;
+            ViewBag.destId = id;
             var values=destinationManager.TGetById(id);
             return View(values);
         }

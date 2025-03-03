@@ -9,8 +9,9 @@ namespace TraversalRezervasyonApp.Controllers
     {
         CommentManager commentManager = new CommentManager(new EFCommentDal());
         [HttpGet]
-        public PartialViewResult AddComment()
+        public PartialViewResult AddComment(int id)
         {
+            ViewBag.destId = id;    
             return PartialView();
         }
         [HttpPost]
