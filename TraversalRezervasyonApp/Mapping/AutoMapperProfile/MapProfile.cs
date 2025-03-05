@@ -2,6 +2,7 @@
 using DTOLayer.DTOs.AnnouncementDTOs;
 using DTOLayer.DTOs.AppUserDTOs;
 using DTOLayer.DTOs.CityDTOs;
+using DTOLayer.DTOs.ContactDTOs;
 using EntityLayer.Concrete;
 
 namespace TraversalRezervasyonApp.Mapping.AutoMapperProfile
@@ -15,7 +16,8 @@ namespace TraversalRezervasyonApp.Mapping.AutoMapperProfile
             CreateMap<AppUserLoginDTOs, AppUser>().ReverseMap();
             CreateMap<AnnouncementListDTO, Announcement>().ReverseMap();
             CreateMap<AnnouncementUpdateDto, Announcement>().ReverseMap();
-           
+            CreateMap<SendMessageDto, ContactUs>().ReverseMap();
+
         }
     }
 }
