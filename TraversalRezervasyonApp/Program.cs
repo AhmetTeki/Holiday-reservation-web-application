@@ -66,6 +66,11 @@ builder.Services.AddControllersWithViews(opt =>
     opt.Filters.Add(new AuthorizeFilter(policy));
 });
 
+builder.Services.ConfigureApplicationCookie(opt =>
+{
+    opt.LoginPath= "/Login/SignIn";
+});
+
 
 
 var app = builder.Build();
